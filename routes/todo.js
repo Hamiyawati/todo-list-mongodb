@@ -2,28 +2,29 @@ const express = require('express')
 const router = express.Router()
 
 const {
-    createTodo,
-    getAllTodos,
+    getAllTodo,
     getTodoById,
+    createTodo,
     updateTodo,
     deleteTodo,
     deleteAllTodos
 } = require('../controllers/todo')
 
 // endpoints for todo
-router.param('/todoId', getTodoById)
-
 // get all the todos
-router.get('/todos', getAllTodos)
+router.get('/todos', getAllTodo)
+
+// get detail todo
+router.get('/todo/:id', getTodoById)
 
 // create a todo
-router.post('/todo/', createTodo)
+router.post('/todo', createTodo)
 
-// update todo
-router.put('/todo/:todoId/', updateTodo)
+// update a todo
+router.patch('/todo/:id', updateTodo)
 
-// delete todo
-router.delete('/todo/:todoId', deleteTodo)
+// delete a todo
+router.delete('/todo/:id', deleteTodo)
 
 // delete all todos
 router.delete('/todos', deleteAllTodos)
