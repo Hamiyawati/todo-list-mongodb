@@ -32,7 +32,7 @@ const login = (req, res) => {
   // compare the provide password with the stored hashed password
   if (bcrypt.compareSync(password, dataUser.password)) {
     // generate a JWT token
-    const token = jwt.sign(username, process.env.JWT_TOKEN)
+    const token = jwt.sign(username, process.env.JWT_SECRET)
 
     res.status(200).json({ token })
   } else {
