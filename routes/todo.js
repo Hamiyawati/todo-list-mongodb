@@ -2,12 +2,12 @@ const express = require('express')
 const router = express.Router()
 
 const {
-    getAllTodo,
-    getTodoById,
-    createTodo,
-    updateTodo,
-    deleteTodo,
-    deleteAllTodos
+  getAllTodo,
+  getTodoById,
+  createTodo,
+  updateTodo,
+  deleteTodo,
+  deleteAllTodos
 } = require('../controllers/todo')
 
 // endpoints for todo

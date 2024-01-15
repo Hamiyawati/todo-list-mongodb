@@ -1,10 +1,9 @@
 const express = require('express')
 const auth = express.Router()
-// const authController = require('../controllers/auth')
 
 const {
-    register,
-    login
+  register,
+  login
 } = require('../controllers/auth')
 
 // endpoints for user register and login

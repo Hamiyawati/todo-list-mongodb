@@ -8,7 +8,7 @@ const todoRouter = require('./routes/todo')
 require('dotenv').config()
 
 // middleware for JSON parsing
-app.use(express.json()) 
+app.use(express.json())
 
 // connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
@@ -24,5 +24,5 @@ app.use(userRouter)
 
 // start server and listen on configured port
 app.listen(process.env.PORT, () => {
-    console.log(`Listen to port: ${process.env.PORT}`)
+  console.log(`Listen to port: ${process.env.PORT}`)
 })
