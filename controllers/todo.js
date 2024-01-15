@@ -23,12 +23,12 @@ const getTodoById = async (req, res) => {
 
 const createTodo = async (req, res) => {
   try {
-    const { title, description } = req.body
+    const { title, description, status } = req.body
 
     const payload = {
       title,
       description: description || '',
-      status: 'Incomplete'
+      status
     }
 
     await Todo.create(payload)
