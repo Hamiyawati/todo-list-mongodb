@@ -11,7 +11,7 @@ const verifyToken = (req, res, next) => {
   }
 
   // verify the JWT token
-  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+  jwt.verify(token, process.env.JWT_TOKEN, (err, user) => {
     // check the token verification
     if (err) {
       return res.status(403).json({ message: 'Invalid token' })

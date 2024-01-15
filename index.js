@@ -11,7 +11,7 @@ require('dotenv').config()
 app.use(express.json())
 
 // connect to MongoDB
-mongoose.connect(process.env.MONGO_CONNECTION)
+mongoose.connect(process.env.MONGO_URI)
 const db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'Connection error'))
